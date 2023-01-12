@@ -1,16 +1,15 @@
+import Contacts from './Contacts/Contacts';
+import FilterSearch from './FilterSearch/FilterSearch';
+import ContactsOfList from './ContactsOfList/ContactsOfList';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div className="container">
+      <h1>Phonebook</h1>
+      <Contacts />
+      <h2>Contacts</h2>
+      <FilterSearch />
+      <ContactsOfList />
     </div>
   );
 };
