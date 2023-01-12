@@ -10,7 +10,7 @@ const ContactsOfList = () => {
     contact.name.toLowerCase().includes(filterLowCase)
   );
   return visibleContacts.length === 0 && contacts.length !== 0 ? (
-    <h2 className={css.notify}>There isn`t such contact</h2>
+    <h2>Please, add the contact</h2>
   ) : (
     <ul className={css.list}>
       {visibleContacts.map(contact => (
@@ -19,4 +19,5 @@ const ContactsOfList = () => {
     </ul>
   );
 };
+
 export default ContactsOfList;
