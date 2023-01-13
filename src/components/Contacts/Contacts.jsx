@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { add } from 'redux/contactsSlice';
 import css from 'components/Contacts/contacts.module.css';
 import Notiflix from 'notiflix';
+import { getContactsSelector } from 'redux/selectors';
 
 const Contacts = () => {
   const [name, setName] = useState('');
@@ -28,7 +29,7 @@ const Contacts = () => {
   };
 
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.contacts);
+  const contacts = useSelector(getContactsSelector);
 
   const handleSubmit = event => {
     event.preventDefault();
